@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <title>Post 1</title>
+</head>
+<body id="home">
+    <header class="hero blog">
+        <div id="navbar" class="navbar top">
+            <h1 class="logo">
+                <span class="text-primary"><i class="fas fa-book-open"></i> Edge</span>Ledger
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#cases">Cases</a></li>
+                    <li><a href="index.html#blog">Blog</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="content">
+            <h1>Blog</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="post">
+            <h2>Blog Post One</h2>
+            <p class="meta">
+                <i class="fas fa-user"></i> Posted by <strong>John Wick</strong> | 20 December 2020
+            </p>
+            <img src="image_resources/blog/blog1.jpg" alt="">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta exercitationem tempora vitae labore fugit dolorem nam, est atque quos repudiandae.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum eius corrupti est vero minus odit deserunt aliquam hic accusantium nulla pariatur a nihil voluptatem amet, deleniti eos quo eligendi expedita possimus commodi accusamus. Quos possimus corporis maxime, porro ipsa ea similique, accusantium consectetur, magnam ipsum tempore sed doloremque quas. Culpa commodi harum at ab labore illo voluptatum corrupti minima expedita laboriosam quibusdam ut magni a rem autem suscipit aspernatur aperiam soluta animi amet, atque earum praesentium totam eius. Doloribus dolore natus nemo minus ipsa facere atque, cumque eum praesentium consectetur autem quod eligendi recusandae? Voluptates temporibus eligendi rerum eos facilis!</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem illo ducimus minus earum ipsum maiores dignissimos numquam nihil beatae quo sunt, facilis hic dolore aspernatur consequatur illum voluptate, quam libero quis. Nobis fuga itaque exercitationem optio! Pariatur non vel, quod vero reprehenderit iure ullam assumenda facilis ipsum eaque ad ea deleniti, alias modi cumque quia sint minima. Saepe, ab libero.</p>
+        </section>
+    </main>
+
+    <footer class="footer bg-dark">
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook fa-2x"> </i></a>
+            <a href="#"><i class="fab fa-twitter fa-2x"> </i></a>
+            <a href="#"><i class="fab fa-youtube fa-2x"> </i></a>
+            <a href="#"><i class="fab fa-linkedin fa-2x"> </i></a>
+        </div>
+        <p>Copyright &copy; 2020 - EdgeLedger</p>
+    </footer>
+    <script>
+        const navbar = document.getElementById('navbar');
+        let scrolled = false;
+
+        window.onscroll = function() {
+            if(window.pageYOffset > 100) {
+                navbar.classList.remove('top');
+                if(!scrolled) {
+                    navbar.style.transform = 'translateY(-70px)';
+                }
+                setTimeout(function() {
+                    navbar.style.transform = 'translateY(0px)';
+                    scrolled = true;
+                }, 200);
+            } else {
+               navbar.classList.add('top'); 
+               scrolled = false
+            }
+        }
+    </script>
+</body>
+</html>
